@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Main from "./Main";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Profile from "./Profile";
+import Quote from "./Quote";
+import Logout from "./Logout";
+import Sidebar from "./SideBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <div className="sticky-sidebar">
+          <Sidebar />
+        </div>
+        <div style={{ minWidth: "85%" }}>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/quote" element={<Quote />} />
+            <Route path="/logout" element={<Logout />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

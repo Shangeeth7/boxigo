@@ -1,0 +1,33 @@
+.ant-menu-item-selected {
+  border-radius: 0;
+  border-left: 10px solid #ec5541 !important;
+}
+
+.ant-menu-item,
+.ant-menu-item > a {
+  color: black !important;
+}
+
+.ant-menu-item-selected,
+.ant-menu-item-selected > a {
+  color: black !important;
+  background-color: transparent !important ;
+}
+
+.ant-menu-item-icon,
+.ant-menu-item-selected .ant-menu-item-icon {
+  color: black !important;
+}
+.ant-layout-sider {
+  background-color: transparent !important;
+}
+ant-menu-inline .ant-menu-item-selected > a {
+  color: grey !important;
+}
+
+.ant-layout-sider,
+.ant-menu {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
