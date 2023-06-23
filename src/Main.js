@@ -23,9 +23,8 @@ const MyComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "http://test.api.boxigo.in/sample-data/"
-        );
+        const response = await axios.get("/sample-data/");
+
         setData(response.data.Customer_Estimate_Flow);
       } catch (error) {
         console.error("Error fetching data:", error);
